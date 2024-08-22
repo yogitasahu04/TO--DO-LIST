@@ -1,0 +1,60 @@
+<!--main-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Todo App</title>
+   <link rel="stylesheet" href="./styles.css">
+   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.2/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+   <div class="container">
+       <div class="stats-container"> 
+           <div class="details">
+               <h1><b>Todo List </b><img class="list" src="img/todolist .png" alt="list"></h1>
+               
+               <div id="progressBar">
+                   <div id="progress"></div>
+               </div>
+           </div>
+           <div class="stats-number">
+               <p id="numbers">0 / 0</p>
+           </div>
+       </div>
+
+
+
+
+
+     <!-- Task Input Form -->
+     <form action="">
+        <input type="text" id="taskInput" placeholder="Write your task">
+        <button id="newTask" type="submit">+</button>
+        <button id="resetButton" type="button"><img class="reset" src="img/arrow.png" alt="reset"></button>
+    </form>
+
+    <select id="filter-tasks">
+        <option value="all">All</option>
+        <option value="completed">Completed</option>
+        <option value="pending">Pending</option>
+    </select>
+
+    
+      
+       <!-- Search Bar -->
+       <form action="" id="searchForm">
+           <input type="text" id="searchInput" placeholder="Search your tasks">
+           <button id="search" type="searchbar"><img class="searchbar" src="img/Find.png"></button>
+       </form>
+
+      
+
+       
+       
+       <ul id="task-list" class="task-list"></ul>
+   </div>
+   <script src="./try.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+</body>
+</html>

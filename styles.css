@@ -1,0 +1,269 @@
+/*main*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+ 
+ :root {
+    --background: #2e1736;
+    --secondaryBackground: #380d47;
+    --text: #0a0b0b; 
+    --purple: #a450ff;
+    --teal: #24feee;
+ }
+ 
+ body {
+    background-image: url("https://wallpapers.com/images/hd/light-purple-background-sv7j3ftke4rukt9p.jpg");
+    color: var(--text);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+ }
+ 
+ .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    max-width: 700px;
+    background-color: var(--secondaryBackground);
+    border-radius: 30px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+ }
+ 
+ .stats-container {
+    padding: 20px;
+    border-radius: 30px;
+    border: 2px solid var(--teal);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 20px;
+ }
+ 
+ .details {
+    flex: 1;
+    width: 100%;
+    
+ }
+ 
+ .details h1 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+    color: aliceblue;
+    font-size: xx-large;
+    font-weight: 50px;
+    font-family: 'Courier New', Courier, monospace;
+ }
+ 
+ .list {
+    width: 44px;
+    height: 50px;
+    
+ }
+ 
+ #progressBar {
+    width: 100%;
+    height: 10px;
+    background-color: var(--background);
+    border-radius: 5px;
+    margin-top: 20px;
+ }
+ 
+ #progress {
+    width: 0%;
+    height: 10px;
+    background-color: var(--teal);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+ }
+ 
+ #numbers {
+    width: 80px;
+    height: 80px;
+    background-color: var(--purple);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 24px;
+    font-weight: bold;
+ }
+ 
+ form {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+ }
+ 
+ input, #searchInput {
+    flex: 1;
+    padding: 10px;
+    background-color: #f3e5ff;
+    border: 1px solid var(--purple);
+    border-radius: 10px;
+    outline: none;
+    color: var(--text);
+ }
+ 
+ button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--purple); 
+    color: var(--text);
+    font-size: 24px;
+    font-weight: bold;
+    outline: none;
+    border: none; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease;
+ }
+ 
+ button:hover {
+    background-color: #9680aa;
+ }
+ 
+ #task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 18px;
+    width: 100%;
+    list-style: none;
+    overflow-x: auto;
+    
+ }
+ 
+ .taskItem {
+    display: flex;
+    background: #d5a4d8;
+    padding: 10px;
+    border-radius: 10px;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    color: var(--text);
+ }
+ 
+ .task {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+ }
+ .task input{
+    width: 20px;
+    height: 20px;
+ }
+ .completed p{
+    text-decoration: line-through;
+    
+ }
+ .taskItem img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+ }
+ 
+ .taskItem .task {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: hidden;
+ }
+ 
+ .taskItem .task p {
+    margin: 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+ }
+ 
+ .taskItem .icons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+ }
+ 
+ .taskItem .icons img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    
+ }
+ 
+ .reset {
+    height: 25px;
+    padding: 2px;
+ }
+
+.searchbar{
+    height: 25px;
+    padding: 2px;
+}
+
+
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+    .stats-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .details, .stats-number {
+        width: 100%;
+    }
+    #numbers {
+        width: 60px;
+        height: 60px;
+        font-size: 18px;
+    }
+    form {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .list {
+        width: 20px;
+   
+        height: 20px;
+    }
+ }
+
+ #filter-tasks {
+  width: 70%;
+   flex: 1;
+   padding: 5px;
+   background-color: #d2b5eb;
+   border: 1px solid var(--purple);
+   border-radius: 10px;
+   outline: none;
+   color: var(--text);
+   margin-top: 20px;
+   align-self: flex-start;
+   display: inline;
+ }
+ 
+ .congrats-message{
+   color: white;
+   margin-top: 5px;
+   font-weight: bold;
+ }
+
+ 
